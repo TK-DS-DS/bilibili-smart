@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Bilibili Favorites Extractor",
+    "version": "1.0",
+    "description": "Extracts video links from your Bilibili favorites.",
+    "permissions": [
+      "activeTab"
+    ],
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "Favorite.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.bilibili.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "icons": {
+      "48": "Favorite.png"
+    },
+    "permissions": ["storage"]
+  }
+  
